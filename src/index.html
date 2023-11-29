@@ -10,7 +10,7 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <link rel="stylesheet" href="style.css">
     <script type="module" src="./main.js"></script>
-    <title>Manualidades UTN</title>
+    <title>Tiendas Starbucks</title>
 </head>
 
 <body>
@@ -18,7 +18,7 @@
     <!-- Navbar con tema oscuro -->
     <nav class="navbar navbar-dark bg-dark fixed-top">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">ORGANIZACIONES UNIVERSALES </a>
+            <a class="navbar-brand" href="#">TIENDAS STARBUCKS</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
                 aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -42,12 +42,11 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link botonesConSesion" id="Mostrar-Manualidades"
-                                href="Subir Manualidades.html">SUBIR UNA
-                                ORGANIZACION</a>
+                                href="Subir Manualidades.html">REGISTRAR UNA TIENDA</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link botonesConSesion" id="Mostrar-Manualidades" href="index.html">VER
-                                ORGANIZACIONES</a>
+                                TIENDAS</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link botonesConSesion" id="CerrarSesion">CERRAR SESIÓN</a>
@@ -57,58 +56,61 @@
             </div>
         </div>
     </nav>
+    
     <!-- Contenido del cuerpo aquí -->
 
-    <!-- Lista de Pacientes -->
+    <!-- Lista de Tiendas Starbucks -->
     <div class="container p-4 mt-5">
         <div class="row">
             <div class="col-md-6 offset-md-3 mt-5">
-                <ul class="list-group Pacientes"></ul>
+                <ul class="list-group TiendasStarbucks"></ul>
             </div>
         </div>
     </div>
 
     <!-- MODAL DE ACTUALIZACIÓN -->
-    <div class="modal fade" id="ActualizarPaciente" tabindex="-1" aria-labelledby="exampleModalLabel"
+    <div class="modal fade" id="ActualizarTiendaStarbucks" tabindex="-1" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content bg-dark text-light">
                 <div class="modal-header bg-dark">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Actualizar Paciente</h1>
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Actualizar Tienda de Starbucks</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form id="Formulario-ActualizarPaciente">
+                    <form id="Formulario-ActualizarTienda">
                         <div class="mb-3">
-                            <label for="Actualizar-Nombre">Nombre del Paciente</label>
+                            <label for="Actualizar-Nombre">Nombre de la Tienda</label>
                             <input type="text" id="Actualizar-Nombre" class="form-control mb-3"
                                 placeholder="Ingresa el nuevo nombre">
                         </div>
                         <div class="mb-3">
-                            <label for="Actualizar-Edad">Edad</label>
-                            <input type="number" id="Actualizar-Edad" class="form-control mb-3"
-                                placeholder="Ingresa la nueva edad">
+                            <label for="Actualizar-Ubicacion">Ubicación</label>
+                            <input type="text" id="Actualizar-Ubicacion" class="form-control mb-3"
+                                placeholder="Ingresa la nueva ubicación">
                         </div>
                         <div class="mb-3">
-                            <label for="Actualizar-Enfermedad">Enfermedad</label>
-                            <input type="text" id="Actualizar-Enfermedad" class="form-control mb-3"
-                                placeholder="Ingresa la nueva enfermedad">
+                            <label for="Actualizar-CantidadMesas">Cantidad de Mesas</label>
+                            <input type="number" id="Actualizar-CantidadMesas" class="form-control mb-3"
+                                placeholder="Ingresa la nueva cantidad de mesas">
                         </div>
                         <div class="mb-3">
-                            <label for="Actualizar-DoctorACargo">Doctor a Cargo</label>
-                            <input type="text" id="Actualizar-DoctorACargo" class="form-control mb-3"
-                                placeholder="Ingresa el nuevo doctor a cargo">
+                            <label for="Actualizar-Gerente">Gerente</label>
+                            <input type="text" id="Actualizar-Gerente" class="form-control mb-3"
+                                placeholder="Ingresa el nuevo gerente">
                         </div>
                         <div class="mb-3">
-                            <label for="Actualizar-FechaIngreso">Fecha de Ingreso</label>
-                            <input type="date" id="Actualizar-FechaIngreso" class="form-control mb-3">
+                            <label for="Actualizar-FechaApertura">Fecha de Apertura</label>
+                            <input type="date" id="Actualizar-FechaApertura" class="form-control mb-3">
                         </div>
-                        <button class="btn btn-primary w-100 mb-2 edit Boton-ActualizarPaciente">Actualizar</button>
+                        <button
+                            class="btn btn-primary w-100 mb-2 edit Boton-ActualizarTiendaStarbucks">Actualizar</button>
                     </form>
                 </div>
             </div>
         </div>
     </div>
+
 
     <!-- MODAL DE INICIO DE SESION -->
     <div class="modal fade" id="InicioSesion" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

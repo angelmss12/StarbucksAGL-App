@@ -2,35 +2,35 @@ import { collection, addDoc } from "https://www.gstatic.com/firebasejs/10.6.0/fi
 import { db } from "./firebase.js";
 
 window.addEventListener('DOMContentLoaded', () => {
-    const formularioPaciente = document.querySelector('#Formulario-Paciente');
+    const formularioTiendaStarbucks = document.querySelector('#Formulario-TiendaStarbucks');
 
-    formularioPaciente.addEventListener('submit', async (e) => {
+    formularioTiendaStarbucks.addEventListener('submit', async (e) => {
         e.preventDefault();
 
-        const NOMBRE = formularioPaciente['Nombre-Paciente'].value;
-        const EDAD = parseInt(formularioPaciente['Edad-Paciente'].value);
-        const ENFERMEDAD = formularioPaciente['Enfermedad-Paciente'].value;
-        const DOCTOR_A_CARGO = formularioPaciente['DoctorACargo-Paciente'].value;
-        const FECHA_INGRESO = formularioPaciente['FechaIngreso-Paciente'].value;
+        const NOMBRE = formularioTiendaStarbucks['Nombre-Tienda'].value;
+        const UBICACION = formularioTiendaStarbucks['Ubicacion-Tienda'].value;
+        const CANTIDAD_MESAS = parseInt(formularioTiendaStarbucks['CantidadMesas-Tienda'].value);
+        const GERENTE = formularioTiendaStarbucks['Gerente-Tienda'].value;
+        const FECHA_APERTURA = formularioTiendaStarbucks['FechaApertura-Tienda'].value;
 
         try {
             // Utiliza addDoc para agregar un documento con un identificador generado automáticamente
-            const nuevoPacienteRef = await addDoc(collection(db, 'Pacientes'), {
+            const nuevaTiendaRef = await addDoc(collection(db, 'Starbucks'), {
                 Nombre: NOMBRE,
-                Edad: EDAD,
-                Enfermedad: ENFERMEDAD,
-                DoctorACargo: DOCTOR_A_CARGO,
-                FechaIngreso: FECHA_INGRESO
+                Ubicacion: UBICACION,
+                CantidadMesas: CANTIDAD_MESAS,
+                Gerente: GERENTE,
+                FechaApertura: FECHA_APERTURA
             });
 
             // Muestra un mensaje si todo sale bien
-            alert(`El paciente ${NOMBRE} ha sido registrado exitosamente`);
+            alert(`La tienda de Starbucks ${NOMBRE} ha sido registrada exitosamente`);
 
             // Limpia el formulario
-            formularioPaciente.reset();
+            formularioTiendaStarbucks.reset();
         } catch (error) {
             // Maneja el error y muestra un mensaje con el error
-            alert('Error al registrar el paciente:', 'noValido');
+            alert('Error al registrar la tienda de Starbucks:', 'noValido');
         }
     });
 });
